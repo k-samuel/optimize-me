@@ -36,7 +36,7 @@ To complete the task, need to optimize each param:
   
 ## Install
 
-`composer create project k-samuel/optimize-me`
+`composer create-project k-samuel/optimize-me`
 
 
 ## Benchmark
