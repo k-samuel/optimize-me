@@ -1,0 +1,30 @@
+{
+    "name": "k-samuel/optimize-me",
+    "version": "1.0.0",
+    "type": "project",
+    "description": "Code optimization challenge for PHP developers",
+    "keywords": [
+        "php",
+        "optimization",
+        "challenge"
+    ],
+    "homepage": "https://github.com/k-samuel/optimize-me",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Kirill Yegorov",
+            "role": "Developer"
+        }
+    ],
+    "config": {
+        "preferred-install": "dist"
+    },
+    "require": {
+        "php": ">=7.4.0"
+    },
+    "autoload": {
+        "psr-4": {
+          "KSamuel\\OptimizeMe\\": "src/"
+        }
+      }
+}
