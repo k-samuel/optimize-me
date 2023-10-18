@@ -1,4 +1,8 @@
-# optimize-me
+[![PHP Version](https://img.shields.io/badge/php-7.4%2B-blue.svg)](https://packagist.org/packages/k-samuel/optimize-me)
+[![Total Downloads](https://img.shields.io/packagist/dt/k-samuel/faceted-search.svg?style=flat-square)](https://packagist.org/packages/k-samuel/optimize-me)
+![Build and Test](https://github.com/k-samuel/optimize-me/workflows/Build%20and%20Test/badge.svg?branch=master&event=push)
+
+# OptimizeMe Challenge
 Code optimization challenge for PHP developers.
 
 PHP modified adaptation.
