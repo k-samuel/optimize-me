@@ -36,11 +36,11 @@ To complete the task, need to optimize each param:
   
 ## Install
 
-`composer create-project k-samuel/optimize-me`
+Run `composer create-project k-samuel/optimize-me`
 
 
 ## Benchmark
-`php bench.php`
+Run `php bench.php`
 
 
 
