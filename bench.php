@@ -31,18 +31,25 @@ if ($sResult != $fResult) {
 //=========================================
 
 //== Check Memory usage ===================
-memory_reset_peak_usage();
-$slowSearch->search($filePath, $nullWriter);
-$slowPeak = memory_get_peak_usage();
+// PHP 8.2 case
+if (function_exists('memory_reset_peak_usage')) {
+    memory_reset_peak_usage();
+    $slowSearch->search($filePath, $nullWriter);
+    $slowPeak = memory_get_peak_usage();
 
-gc_collect_cycles();
+    gc_collect_cycles();
 
-memory_reset_peak_usage();
-$fastSearch->search($filePath, $nullWriter);
-$fastPeak = memory_get_peak_usage();
+    memory_reset_peak_usage();
+    $fastSearch->search($filePath, $nullWriter);
+    $fastPeak = memory_get_peak_usage();
 
-gc_collect_cycles();
-//==========================================
+    $slowPeak = number_format($slowPeak / 1024, 3) . ' kb';
+    $fastPeak = number_format($fastPeak / 1024, 3) . ' kb';
+    gc_collect_cycles();
+} else {
+    $slowPeak = '- (PHP >=8.2)';
+    $fastPeak = '- (PHP >=8.2)';
+}
 
 //== bench =================================
 $timeLimit = 1;
@@ -94,8 +101,8 @@ for ($i = 0; $i < 100000; $i++) {
 //== format results =====
 $results = [
     ['', 'Count', 'Memory', 'Best Time'],
-    ['Slow', $slowCount, number_format($slowPeak / 1024, 3) . ' kb', number_format($slowTime, 6) . ' s.'],
-    ['Fast', $fastCount, number_format($fastPeak / 1024, 3) . ' kb', number_format($fastTime, 6) . ' s.'],
+    ['Slow', $slowCount, $slowPeak, number_format($slowTime, 6) . ' s.'],
+    ['Fast', $fastCount, $fastPeak, number_format($fastTime, 6) . ' s.'],
 ];
 $width = [10, 10, 20, 18];
 echo PHP_EOL;
