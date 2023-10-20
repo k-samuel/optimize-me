@@ -47,8 +47,8 @@ if (function_exists('memory_reset_peak_usage')) {
     $fastPeak = number_format($fastPeak / 1024, 3) . ' kb';
     gc_collect_cycles();
 } else {
-    $slowPeak = '- (PHP >=8.2)';
-    $fastPeak = '- (PHP >=8.2)';
+    $slowPeak = 'n.a. (PHP>=8.2)';
+    $fastPeak = 'n.a. (PHP>=8.2)';
 }
 
 //== bench =================================
