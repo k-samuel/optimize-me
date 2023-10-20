@@ -42,6 +42,8 @@ Run `composer create-project k-samuel/optimize-me`
 ## Benchmark
 Run `php bench.php`
 
+Note: Memory consumption statistics accessible only for PHP >= 8.2 
+
 
 
 
