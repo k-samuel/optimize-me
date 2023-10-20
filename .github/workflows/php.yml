@@ -39,4 +39,4 @@ jobs:
       run: ./vendor/bin/phpunit -c ./phpunit.xml.dist --coverage-clover coverage.xml
 
     - name: Bench
-      run: ./bench.php
+      run: php ./bench.php
