@@ -37,3 +37,6 @@ jobs:
       
     - name: PHPUnit tests
       run: ./vendor/bin/phpunit -c ./phpunit.xml.dist --coverage-clover coverage.xml
+
+    - name: Bench
+      run: php ./bench.php
