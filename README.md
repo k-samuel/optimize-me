@@ -48,7 +48,7 @@ Note: Memory consumption statistics accessible only for PHP >= 8.2
 ## Expected results
 Try to get comparable (or better) results. Please note that performance is highly dependent on your hardware and results may vary.
 
-PHP 8.2 + JIT, apple M2
+PHP 8.2 + opcache + JIT, apple M2
 |        | Count  | Memory       | Best Time    |
 | -----: | -----: | -----------: | -----------: |
 | Slow   | 250    | 2,856.453 kb | 0.003882 s.  |
