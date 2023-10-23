@@ -55,7 +55,10 @@ PHP 8.2 + opcache + JIT, apple M2
 | Fast   | 1536   | 516.797 kb   | 0.000645 s.  |
 
 
-
+### Useful materials
+- https://www.npopov.com/2014/12/22/PHPs-new-hashtable-implementation.html
+- https://github.com/rurban/smhasher
+- https://php.watch/articles/jit-in-depth
 
 
 
